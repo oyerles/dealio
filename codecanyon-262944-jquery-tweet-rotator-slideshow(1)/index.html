@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tweet Rotator 1.0 - Rotating Tweets on your website.</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/tweetrotator-min.js"></script>
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" rel="stylesheet" type="text/css" >
+		
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css">
+		<link rel="stylesheet" type="text/css" href="css/tweetrotator.css">
+		
+		<script>
+			$(document).ready(function() {
+				
+				$("#example").tweetrotator({ operator: "#google", multiple_colors: true, tweetlimit: 6, autorotate: true, idletime: 5, parameters: "&lang=en" });
+				$("#example_vert").tweetrotator({ operator: "from:johandorper", direction: "vertical", multiple_colors: true, tweetlimit: 6, autorotate: false, idletime: 5, parameters: "", prefix: "color_alt_" });
+				$("#example_nocolor").tweetrotator({ operator: "#ny", multiple_colors: false, tweetlimit: 6, autorotate: true, idletime: 5, parameters: "&lang=en" });
+			});
+		</script>
+	</head>
+	<body>
+			
+			
+			
+			<div class="wrapper">
+				<h1>Tweet Rotator 1.0 - Showing Tweets in style!</h1>
+				<div class="shadow">
+					<div id="example"></div>
+				</div>
+				
+				<div class="documentation">
+					<h1>Examples and documentation</h1>
+					<p>
+						Tweet Rotator gets the latest Tweets from a user, a hashtag or another <a target="_blank" href="http://search.twitter.com/advanced">search operator</a> and publishes it in an interactive banner. It is completely written in JavaScript using the jQuery framework. In other words, <strong>NO</strong> database or serverside programming language is required. Its lightweight, 8kb and easy to integrate into your website.
+					</p>
+
+						<strong>Current features:</strong>
+						<ul>
+							<li>Load in any Tweets based upon 'Twitter Search Operators'.</li>
+							<li>Horizontal and vertical directions supported.</li>
+							<li>Manual or auto-rotation mode available.</li>
+							<li>Set the time between cycles in seconds.</li>
+							<li>Multiple backgroundcolor mode.</li>
+							<li>Load in as many Tweets as you want (default: 6)</li>
+						</ul>
+						
+						<p>
+							<h1>How to implement?</h1>
+							First include the jQuery library to the 'head' section of your webpage. Then include Tweet Rotator, I'd recommend using the minified version (js/tweetrotator-min.js).<br/>
+							<br/>
+							<em>Example: <br/>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"&gt;&lt;/script&gt;</em><br/>
+							<em>&lt;script src="js/tweetrotator-min.js"&gt;&lt;/script&gt;</em><br/>
+						</p>
+						<br><br>
+						<p>
+							<strong>Setting up</strong><br/>
+							When the implementation is done you can setup Tweet Rotator by adding the following lines to the end of hour 'head' section on your webpage:<br/>
+							<br/>
+							<em>&lt;script&gt;</em><br/>
+							<em>$(document).ready(function() {</em><br/>
+							<em>$("#example").tweetrotator({operator: "#google"});</em><br/>
+							<em>});</em><br/>
+							<em>&lt;/script&gt;</em>
+							<br/>
+							<br/>
+							And you are done, Tweet Rotator will now look for an element with the id 'example' and load in Tweets that match the operator, in this case #google. Don't forget to add an width and height to your 'example' element!.
+						</p>
+						
+						<p>
+							<strong>Options</strong><br/>
+							Tweet Rotator comes with a set of options which can be set on startup, a description of the options:<br/>
+						  <span>
+							  operator <em>Sets the operator (keyword, user, hashtag) more information about the use of operators: http://search.twitter.com/operators</em><br/>
+							  <br/>
+							  multiple_colors <em>Use multiple background colors (true* or false)</em><br/>
+							  direction<em>Horizontal or vertical scrolling (horizontal* or vertical)</em><br/>
+							  autorotate<em>Auto rotate the tweets (true* or false)</em><br/>
+							  idletime<em>Number of seconds between tweets that popup (in seconds)</em><br/>
+							  convertTextlink<em>Automaticly convert text links to HTML? (true* or false</em><br/>
+							  linkHashtags<em>Automaticly convert hashtags to URL? (true* or false)</em><br/>
+							  linkUsernames<em>Automaticly convert uvernames to URL? (true* or false)</em><br/>
+							  parameters<em>Add additional parameters like language: &amp;lang=en</em><br/>
+							  default_from_line<em>The top line above the Tweet</em><br/>
+							  default_time_line<em>The bottom line below the Tweet</em><br/>
+							  <em>* is default</em>
+						  </span>
+						</p>
+						
+						<p>
+							<strong>Questions?</strong><br />
+								Mention me on <a href="http://www.twitter.com/johandorper">Twitter</a>.
+						</p>
+						</div>
+						<h1>Vertical and no rotate example</h1>
+						
+						<div class="shadow">
+							<div id="example_vert"></div>
+						</div>
+						
+						<h1>Horizontal, without multiple colors example</h1>
+						
+						<div class="shadow">
+							<div id="example_nocolor"></div>
+						</div>
+			</div>
+			
+			
+			
+					
+	</body>
+</html>
