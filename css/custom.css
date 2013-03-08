@@ -1,0 +1,62 @@
+#invited {
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #08a7e0;
+}
+
+.row #invited {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	color: #eee;
+}
+
+h1 {
+	color: #eee;
+}
+
+.row {
+	text-align: left;
+}
+
+#video {
+	text-align: left;
+}
+
+#top-row2 {
+	background-image:url("img/lmad/banner2.jpg");
+}
+
+.large-3 {
+	background-image:url("img/lmad/bkg2.png");
+
+}
+
+#times {
+	background-color: #08a7e0;
+	height: 100%;
+}
+
+#times h5{
+	color: #eee;
+}
+
+#time p {
+	font-weight: bold;
+	font-size: 12px;
+	line-height: .5;
+	text-align: right !important;
+}
+
+#logo {
+	background-color: #ef435c;
+	text-align: left;
+}
+
+#map {
+	background-color: #08a7e0;
+}
+
+.exptimes {
+	line-height: 50%;
+}
