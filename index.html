@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <meta name="viewport" content="width=device-width" />
   <title>Dude Let's Make A Deal</title>
 
@@ -22,11 +23,12 @@
 
 <!--twitter feed -->
 
+	<link rel="stylesheet" href="css/tweetrotator.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-	<script src="js/tweetrotator-min.js"></script>
+	<script src="js/tweetrotator.js"></script>
 	<script>
 		$(document).ready(function() {
-			$("#example").tweetrotator({ operator: "#google", multiple_colors: true, tweetlimit: 6, autorotate: true, idletime: 5, parameters: "&lang=en" });
+			$("#example").tweetrotator({ operator: "@elevatechurch_", multiple_colors: true, tweetlimit: 6, autorotate: true, idletime: 5, parameters: "&lang=en" });
 		});
 	</script>
 
@@ -38,9 +40,11 @@
 <!-- banner -->	
 
 	<div class="row">
-		<div class="large-12 columns">
-			<img src="img/lmad/banner2.jpg" alt="Let's Make A Deal">
+		<div class="large-12 columns" class="banner">
+			<img src="img/lmad/banner3.png" alt="Let's Make A Deal" >
 			<hr />
+			<div class="social-media">
+			</div>
 		</div>
 	</div>
 
@@ -51,9 +55,11 @@
 
 <!-- video -->
 
-			<div class="row">
+			<div class="row" >
 				<div class="large-5 columns" id="video	">
+					<div class="flex-video widescreen vimeo">
 						<iframe src="http://player.vimeo.com/video/61394563?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="480" height="270" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					</div>
 				</div>
 
 <!--elevate church logo -->
@@ -91,13 +97,13 @@
 
 <!--twitter-->
 		
-			<div class="row">
+			<div class="row" id="involve">
 				<div class="large-9 columns" id="example"></div>
 			
 
 <!-- invite -->
 		
-				<div class="small-3 columns" id="invite">
+				<div class="large-3 columns" id="invite">
 					<a href="http://form.jotform.us/form/30668267331153"><img src="img/lmad/invite.png" alt="Invite Someone Today"></a>
 				</div>
 			</div>
